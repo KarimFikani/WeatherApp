@@ -17,6 +17,11 @@
 * RxJava for the RxBus
 * Hilt for dependency injection
 
+## Project structure:
+* core package - holds all the common functionalities for the app
+* search package - holds all the UI and business logic for the search page
+* weather package - holds all the UI and business logic for the main screean that displays the weather info and the location permission logic
+
 ## Time breakdown:
 * 20 min - Understand the requirements and setup the plan for execution
 * 10 min - Used Postman to test the APIs and understand the response
