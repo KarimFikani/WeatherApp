@@ -40,6 +40,6 @@
 * made search page more responsive by displaying results as the user types the location
 
 ## Showcase:
-| Video 1 (location permission NOT grated)  | Second Header (location permission granted |
+| Location permission NOT grated  | Location permission granted |
 | ------------- | ------------- |
 | ![](https://github.com/KarimFikani/WeatherApp/blob/main/video_1.gif) | ![](https://github.com/KarimFikani/WeatherApp/blob/main/video_2.gif) |
