@@ -21,7 +21,7 @@
 * 20 min - Understand the requirements and setup the plan for execution
 * 10 min - Used Postman to test the APIs and understand the response
 * 20 min - Setup the project with all the dependencies needed
-* 1.5 hrs - Implement the search page, and display search results along with testing and covering corner cases
+* 1.15 hrs - Implement the search page, and display search results along with testing and covering corner cases
 * 1 hr - Implement the main weather page and display weather info to the user
 * 25 min - Implement location permission logic with testing
 * 20 min - Implement unit tests for one of the mappers
