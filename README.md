@@ -7,7 +7,7 @@
 * Auto-load the last city searched upon app launch - DONE
 * Ask the User for location access, If the User gives permission to access the location, then retrieve weather data by default - DONE
 
-## Must have:
+## Must have that are used:
 * Kotlin - Used Kotlin in the whole codebase.
 * Java - Used Java in unit tests
 * Used MVVM as the architecture for the app
