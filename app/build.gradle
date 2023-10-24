@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.karimfikani.weatherapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.karimfikani.weatherapp"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+
+    /**
+     * Usually I like to move versions and dependencies into two separate gradle files so that when
+     * we need to update the version or change the dependency path we do it only once for the whole project.
+     * For the sake of this demo app I will keep everything here.
+     *
+     * versions.gradle would have all the versions of all the dependencies that we include in this project
+     * dependencies.gradle would have the full path of every dependency that we need
+     */
+
+    def moshi_version = "1.14.0"
+    def retrofit_version = "2.9.0"
+    def android_lifecycle_version = "2.6.2"
+
+    kapt 'com.google.dagger:hilt-compiler:2.44.2'
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$android_lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$android_lifecycle_version"
+    implementation 'androidx.fragment:fragment-ktx:1.6.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.google.dagger:hilt-android:2.44.2'
+
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+}

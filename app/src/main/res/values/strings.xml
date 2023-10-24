@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="search_bar_hint">Search for a city</string>
+    <string name="keyboard_enter">Search</string>
+    <string name="search_page_error_message">Failed to get location(s)</string>
+    <string name="weather_page_error_message">Failed to get weather info</string>
+</resources>
